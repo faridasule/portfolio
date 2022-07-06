@@ -17,19 +17,9 @@ body{
 
 }
 
-   
-
- 
-  
-
-
 header{
     
-    background-color: black;
-    
-
-
-    
+    background-color: black;   
 }
 
   .nav-toggle {
@@ -43,7 +33,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1.3rem;
-    z-index: 1;
+    position: sticky;
+    top: 0;
 }
 .logo{
     
@@ -62,8 +53,7 @@ span{
     display: flex;
     list-style: none;
     text-decoration: none;
-    /* justify-content: space-between; */
-
+    
 
 }
 .nav-menu li{
@@ -106,8 +96,7 @@ li a:hover{
     max-width: 95%;
 }
 .showcase-content{
-    /* margin-right: 3rem;
-    padding-right: 3rem; */
+   
     margin:10px;
     padding: 10px;
     text-decoration: none;
@@ -118,18 +107,13 @@ li a:hover{
     margin-bottom: 8%;
     
 }
-.details{
-    
 
-}
 
 #skill{
     font-size: 2rem;
 
 }
-.hero-media-wrapper{
-    
-}
+
 .hero-media-wrapper svg{
     align-items: center;
     width: 30px;
@@ -143,11 +127,8 @@ li a:hover{
     cursor: pointer;
     
 }
-.button-content { 
-    
-}
-    
-.btn{
+
+ .btn{
 
 
     display: inline-block;
@@ -156,19 +137,35 @@ li a:hover{
     font-size: 1.1rem;
     background-color: rgb(56, 56, 247);
     margin-top: 1.3rem;
-    transition: 0.3s;
+    transition:all 0.3s;
     cursor: pointer;
+    width: 200px;
+    height: 60px;
+    animation: animate1 2s forward 1s
+    ease-in-out;
+    
+}
+    @keyframes animate1 {
+        
+       
+        to{
+            width: 250px;
+            background-color: black;
+        }
+    }
+
     
        
 
     
-}
+    
 .btn:hover{
     background-color: #000;
-    transition: 0.3s;
-    
+    transition: 0.3s; 
 }
     
+
+  
 .btn a{
     text-decoration: none;
     color: #fff;
@@ -177,13 +174,14 @@ li a:hover{
 }
 #cv-button{
     background: #000;
+
 }
 #cv-button:hover{
     background-color: rgb(56, 56, 247);
 }
 
 
-@media (max-width:750px) {
+ @media (max-width:750px) { 
       .hero-section{
           display: flex;
           width: 100%;
@@ -213,13 +211,13 @@ li a:hover{
       font-size: 1.365rem;
   }
 
-}
+} */
 .hero-media-wrapper
 
 /*About Section*/ 
  .about{
      width: 100%;
-     
+     height: 100vh;
      margin: auto;
      border: 3px solid red;
 
@@ -243,10 +241,12 @@ li a:hover{
  }
  #aboutme{
      color: rgb(56, 56, 247);
+     text-align: center;
+    
     
  }
  .about-brief{
-     padding: 30px
+     padding: 30px;
     
  }
  
@@ -262,6 +262,34 @@ li a:hover{
      fill:#000;
      background-color: #fff;
  }
+
+    .AB{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2%;
+        padding: 2rem;
+        margin-top: 60px;
+    }
+    .A{
+        padding: 20px;
+        text-align: center;
+    }
+    .A img{
+        margin: 1rem auto;
+        height: 300px;
+        width: 98%;
+    }
+    #my-moment{
+        align-items: center;
+        text-align: center;
+        color: rgb(56, 56, 247);
+    
+    }
+   
+
+
+
+
  @media (max-width:750px) {
     .about-brief{
     padding: 10px;
@@ -275,8 +303,15 @@ li a:hover{
     .about-wrapper{
         margin-top: 30px;
     }
+    .AB{
+        padding: 0.2rem;
+    }
+    .A{
+        padding: 3px;
+    }
 
  }
+ 
  
 
 
